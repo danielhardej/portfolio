@@ -18,15 +18,16 @@
 		<link rel="apple-touch-icon" href="/icon.png">
 		<%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
 		<%= javascript_importmap_tags %>
+		<%= javascript_include_tag "application", "data-turbo-track": "reload" %>
 	</head>
 
 	<body>
 		<header>
 			<nav>
 				<ul>
-				<li><%= link_to 'Home', root_path %></li>
-				<li><%= link_to 'About', about_path %></li>
-				<li><%= link_to 'Contact', contact_path %></li>
+				<h2><%= link_to 'Home', root_path %></h2>
+				<h2><%= link_to 'About', about_path %></h2>
+				<h2><%= link_to 'Contact', contact_path %></h2>
 				</ul>
 			</nav>
 		</header>
@@ -45,9 +46,10 @@
 				<div class="column">
 				<h3>My Skills</h3>
 				<br>
-				<p>Menu item 1</p>
-				<p>Menu item 2</p>
-				<p>Menu item 3</p>
+				<p><%= link_to 'Menu item 1', about_path %></p>
+				<p><%= link_to 'Menu item 2', contact_path %></p>
+				<p><%= link_to 'Menu item 3', root_path %></p>
+				<p><%= link_to 'Menu item 4', portfolio_path %></p>
 				</div>
 				<div class="column">
 				<h3>Get in touch</h3>
