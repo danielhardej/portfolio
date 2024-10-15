@@ -234,3 +234,25 @@ footer {
 .horizontal-scrolling-container .scroll-item.center {
     transform: scale(1.2);
 }
+
+/* Ensure the horizontal scrolling container only displays three items at a time */
+.horizontal-scrolling-container .scrolling-content {
+    width: calc(3 * 220px); /* 3 items, each 200px wide with 10px margin on each side */
+}
+
+/* Styles for the title, main body of text, and image in each item of the horizontal scrolling container */
+.horizontal-scrolling-container .scroll-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.horizontal-scrolling-container .scroll-item p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.horizontal-scrolling-container .scroll-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}

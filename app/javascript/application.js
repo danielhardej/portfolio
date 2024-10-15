@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     rightButton.addEventListener('click', function() {
-        if (currentIndex < scrollItems.length - 1) {
+        if (currentIndex < scrollItems.length - 3) { // Ensure only 3 items are displayed at a time
             currentIndex++;
             updateScroll();
         }
