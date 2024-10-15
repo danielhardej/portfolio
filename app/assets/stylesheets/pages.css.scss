@@ -34,8 +34,14 @@ main {
     .jumbotron {
         background-color: coral;
         width: 100%;
+        height: 500px;
         color: white;
         padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
+        text-align: center; /* Center text */
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         &:hover {
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -51,7 +57,7 @@ main {
     .row {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: stretch;
     }
     
     .column {
@@ -61,9 +67,25 @@ main {
         background-color: lightblue;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
-        &:hover {
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+        .column-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: navy;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            justify-content: end;
+            &:hover {
+                background-color: black;
+                box-shadow: 0 0 10px rgba(0, 0, 128, 0.2);
+            }
         }
+        
+        &:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
     }
 }
 
@@ -85,7 +107,8 @@ header {
     nav {
         display: flex;
         justify-content: flex-end;
-        margin-right: 20%;
+        margin-left: 10%;
+        margin-right: 10%;
     }
 
     nav ul {
@@ -94,7 +117,7 @@ header {
         margin: 0;
         display: flex;
 
-        li {
+        h2 {
             margin: 0 15px;
         
             a {
@@ -125,6 +148,7 @@ footer {
 
     p {
         color: white;
+        font-weight: bold;
     }
 
     .social-icon {
@@ -138,9 +162,12 @@ footer {
     }
 
     .row {
+        margin-left: 20%;
+        margin-right: 20%;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        text-align: center;
     }
     
     .column {
@@ -149,110 +176,4 @@ footer {
         padding: 30px;
         color: white;
     }
-}
-
-/* Styles specific to the Portfolio page */
-.jumbotron {
-    position: relative;
-    overflow: hidden;
-}
-
-.jumbotron .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-.jumbotron .slideshow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    transition: transform 1s ease-in-out;
-}
-
-.jumbotron .slide {
-    min-width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-}
-
-.horizontal-scrolling-container {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-    margin-top: 50px;
-}
-
-.horizontal-scrolling-container .scroll-button {
-    background-color: navy;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    position: absolute;
-    z-index: 1;
-}
-
-.horizontal-scrolling-container .scroll-button.left {
-    left: 0;
-}
-
-.horizontal-scrolling-container .scroll-button.right {
-    right: 0;
-}
-
-.horizontal-scrolling-container .scrolling-content {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.horizontal-scrolling-container .scroll-item {
-    min-width: 200px;
-    margin: 0 10px;
-    background-color: lightblue;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.horizontal-scrolling-container .scroll-item.center {
-    transform: scale(1.2);
-}
-
-/* Ensure the horizontal scrolling container only displays three items at a time */
-.horizontal-scrolling-container .scrolling-content {
-    width: calc(3 * 220px); /* 3 items, each 200px wide with 10px margin on each side */
-}
-
-/* Styles for the title, main body of text, and image in each item of the horizontal scrolling container */
-.horizontal-scrolling-container .scroll-item h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.horizontal-scrolling-container .scroll-item p {
-    font-size: 1em;
-    margin-bottom: 10px;
-}
-
-.horizontal-scrolling-container .scroll-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
 }

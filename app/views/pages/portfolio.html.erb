@@ -1,56 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Portfolio</title>
+    <title>Welcome</title>
     <%= stylesheet_link_tag 'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
 
     <main>
         <div class="jumbotron">
-            <div class="overlay">
-                <h2>My Portfolio</h2>
-                <p>Welcome to my portfolio. Here you can find my work and projects.</p>
-                <%= link_to 'View My Work', portfolio_path, class: "button" %>
-            </div>
-            <div class="slideshow">
-                <div class="slide" style="background-image: url('/path/to/image1.jpg');"></div>
-                <div class="slide" style="background-image: url('/path/to/image2.jpg');"></div>
-                <div class="slide" style="background-image: url('/path/to/image3.jpg');"></div>
-            </div>
+            <h2>Welcome to My Portfolio</h2>
+            <p>I do many things, but this is a tagline summarizing what I do.</p>
+            <p>Check out my work below.</p>
+            <%= link_to 'View My Work', portfolio_path, class: "button" %>
         </div>
 
-        <div class="horizontal-scrolling-container">
-            <button class="scroll-button left">&lt;</button>
-            <div class="scrolling-content">
-                <div class="scroll-item">
-                    <h3>Item 1</h3>
-                    <p>Main body of text for item 1.</p>
-                    <img src="/path/to/image1.jpg" alt="Image 1">
+        <div class="container">
+            <div class="row">
+                <div class="column">
+                    <h3>Header 1</h3>
+                    <p>Some information about me and what I do.</p>
+                    <p><%= link_to image_tag('github-mark-white.svg', alt: 'GitHub', width: '50', height: '50', class: "social-icon") %></p>
+                    <%= link_to 'Click here!', portfolio_path, class: "column-button" %>
                 </div>
-                <div class="scroll-item">
-                    <h3>Item 2</h3>
-                    <p>Main body of text for item 2.</p>
-                    <img src="/path/to/image2.jpg" alt="Image 2">
+                <div class="column">
+                    <h3>Header 2</h3>
+                    <p>Some information about my skills.</p>
+                    <p><%= link_to image_tag('github-mark-white.svg', alt: 'GitHub', width: '50', height: '50', class: "social-icon") %></p>
+                    <%= link_to 'Click here!', portfolio_path, class: "column-button" %>
                 </div>
-                <div class="scroll-item">
-                    <h3>Item 3</h3>
-                    <p>Main body of text for item 3.</p>
-                    <img src="/path/to/image3.jpg" alt="Image 3">
+                <div class="column">
+                    <h3>Header 3</h3>
+                    <p>Some information about my work.</p>
+                    <p><%= link_to image_tag('github-mark-white.svg', alt: 'GitHub', width: '50', height: '50', class: "social-icon") %></p>
+                    <%= link_to 'Click here!', portfolio_path, class: "column-button" %>
                 </div>
-                <div class="scroll-item">
-                    <h3>Item 4</h3>
-                    <p>Main body of text for item 4.</p>
-                    <img src="/path/to/image4.jpg" alt="Image 4">
-                </div>
-                <div class="scroll-item">
-                    <h3>Item 5</h3>
-                    <p>Main body of text for item 5.</p>
-                    <img src="/path/to/image5.jpg" alt="Image 5">
+                <div class="column">
+                    <h3>Header 4</h3>
+                    <p>Some information about my work.</p>
+                    <p><%= link_to image_tag('github-mark-white.svg', alt: 'GitHub', width: '50', height: '50', class: "social-icon") %></p>
+                    <%= link_to 'Click here!', portfolio_path, class: "column-button" %>
                 </div>
             </div>
-            <button class="scroll-button right">&gt;</button>
         </div>
+            
     </main>
 
 </body>

@@ -328,6 +328,7 @@ DEPENDENCIES
   brakeman
   capybara
   debug
+  ffi (~> 1.15)
   importmap-rails
   jbuilder
   puma (>= 5.0)
