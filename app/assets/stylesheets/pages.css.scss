@@ -153,6 +153,9 @@ footer {
 
     .social-icon {
         margin-right: 12px;
+        margin-left: 12px;
+        // center align horizontally
+        justify-content: center;
     }
 
     .footnote {
