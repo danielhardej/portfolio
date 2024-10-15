@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <%= stylesheet_link_tag 'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+
+    <main>
+        <div class="jumbotron">
+            <h2>Welcome to My Portfolio</h2>
+            <p>I do many things, but this is a tagline summarizing what I do.</p>
+            <p>Check out my work below.</p>
+            <%= link_to 'View My Work', portfolio_path, class: "button" %>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="column">
+                    <h3>About Me</h3>
+                    <p>Some information about me.</p>
+                    <%= link_to 'View My Work', portfolio_path, class: "button" %>
+                </div>
+                <div class="column">
+                    <h3>My Skills</h3>
+                    <p>Some information about my skills.</p>
+                    <%= link_to 'View My Work', portfolio_path, class: "button" %>
+                </div>
+                <div class="column">
+                    <h3>My Work</h3>
+                    <p>Some information about my work.</p>
+                    <%= link_to 'View My Work', portfolio_path, class: "button" %>
+                </div>
+            </div>
+        </div>
+            
+    </main>
+
+</body>
+</html>

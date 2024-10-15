@@ -1,0 +1,152 @@
+body, html {
+    height: 100%;
+}
+
+main {
+    background-color: whitesmoke;
+    padding: 50px;
+    text-align: center;
+    color: black;
+
+    h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: navy;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        &:hover {
+            background-color: black;
+            box-shadow: 0 0 10px rgba(0, 0, 128, 0.2);
+        }
+    }
+
+    .jumbotron {
+        background-color: coral;
+        width: 100%;
+        color: white;
+        padding: 50px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        &:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .container {
+        width: 100%;
+        padding: 20px;
+        align-items: stretch;
+    }
+    
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .column {
+        flex: 1;
+        margin: 10px;
+        padding: 20px;
+        background-color: lightblue;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        &:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+header {
+
+    background-color: navy;
+    padding: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 20%;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 20%;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+
+        li {
+            margin: 0 15px;
+        
+            a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: navy;
+    padding: 50px;
+
+    a {
+        color: white;
+
+        &:hover {
+            color: lightblue;
+            text-decoration: underline;
+        }
+    }
+
+    p {
+        color: white;
+    }
+
+    .social-icon {
+        margin-right: 12px;
+    }
+
+    .footnote {
+        color: white;
+        // align text in the center
+        text-align: center;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .column {
+        flex: 1;
+        margin: 20px;
+        padding: 30px;
+        color: white;
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= content_for(:title) || "Portfolio" %></title>
+		<%= stylesheet_link_tag 'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<%= csrf_meta_tags %>
+		<%= csp_meta_tag %>
+
+		<%= yield :head %>
+
+		<link rel="manifest" href="/manifest.json">
+		<link rel="icon" href="/icon.png" type="image/png">
+		<link rel="icon" href="/icon.svg" type="image/svg+xml">
+		<link rel="apple-touch-icon" href="/icon.png">
+		<%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+		<%= javascript_importmap_tags %>
+	</head>
+
+	<body>
+		<header>
+			<nav>
+				<ul>
+				<li><%= link_to 'Home', root_path %></li>
+				<li><%= link_to 'About', about_path %></li>
+				<li><%= link_to 'Contact', contact_path %></li>
+				</ul>
+			</nav>
+		</header>
+
+		<%= yield %>
+
+		<footer>
+			<div class ="row">
+				<div class="column">
+				<h3>About Me</h3>
+				<br>
+				<p><%= link_to 'About Me', about_path %></p>
+				<p><%= link_to 'Contact', contact_path %></p>
+				<p><%= link_to 'Portfolio', portfolio_path %></p>
+				</div>
+				<div class="column">
+				<h3>My Skills</h3>
+				<br>
+				<p>Menu item 1</p>
+				<p>Menu item 2</p>
+				<p>Menu item 3</p>
+				</div>
+				<div class="column">
+				<h3>Get in touch</h3>
+				<br>
+					<p>
+						<%= link_to image_tag('github-mark-white.svg', alt: 'GitHub', width: '50', height: '50', class: "social-icon"), 'https://github.com/danielhardej', target: '_blank' %>
+						<%= link_to image_tag('linkedin-icon.png', alt: 'LinkedIn', width: '50', height: '50', class: "social-icon"), 'https://www.linkedin.com/in/daniel-hardej-7351689a/', target: '_blank' %>
+						<%= link_to image_tag('twitter-icon.png', alt: 'Twitter', width: '50', height: '50', class: "social-icon"), 'https://twitter.com/yourusername', target: '_blank' %>
+					</p>
+				</div>
+			</div>
+			<p class="footnote">&copy; Spring Break 2004</p>
+		</footer>
+	</body>
+</html>
