@@ -7,8 +7,31 @@
 <body>
 
     <main>
+        <%= form_with url: contact_path, method: :post, local: true do |form| %>
+            <div>
+                <%= form.label :name %>
+                <%= form.text_field :name %>
+            </div>
+            <div>
+                <%= form.label :email %>
+                <%= form.email_field :email %>
+            </div>
+            <div>
+                <%= form.label :message %>
+                <%= form.text_area :message %>
+            </div>
+            <div>
+                <%= form.submit "Send" %>
+            </div>
+        <% end %>
 
-            
+        <div>
+            <h3>Connect with me</h3>
+            <p>
+                <%= link_to 'GitHub', 'https://github.com/danielhardej', target: '_blank' %>
+                <%= link_to 'LinkedIn', 'https://www.linkedin.com/in/daniel-hardej-7351689a/', target: '_blank' %>
+            </p>
+        </div>
     </main>
 
 </body>
