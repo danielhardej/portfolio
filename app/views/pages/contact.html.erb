@@ -3,11 +3,22 @@
 <head>
     <title>Contact</title>
     <%= stylesheet_link_tag 'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'contact', media: 'all', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
 
     <main>
-        <%= form_with url: contact_path, method: :post, local: true do |form| %>
+        <div>
+            <div class="jumbotron">
+            <h2>Connect with me</h3>
+            <h3 class="contact-links"><%= link_to 'GitHub', 'https://github.com/danielhardej', target: '_blank' %></h3>
+            <h3><%= link_to 'LinkedIn', 'https://www.linkedin.com/in/daniel-hardej-7351689a/', target: '_blank' %></h3>
+            </p>
+            <%= link_to 'View My Work', portfolio_path, class: "button" %>
+            </div>
+        </div>
+        <br>
+            <%= form_with url: contact_path, method: :post, local: true, html: { class: 'contact-form' } do |form| %>
             <div>
                 <%= form.label :name %>
                 <%= form.text_field :name %>
@@ -24,14 +35,6 @@
                 <%= form.submit "Send" %>
             </div>
         <% end %>
-
-        <div>
-            <h3>Connect with me</h3>
-            <p>
-                <%= link_to 'GitHub', 'https://github.com/danielhardej', target: '_blank' %>
-                <%= link_to 'LinkedIn', 'https://www.linkedin.com/in/daniel-hardej-7351689a/', target: '_blank' %>
-            </p>
-        </div>
     </main>
 
 </body>
